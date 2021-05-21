@@ -1,0 +1,26 @@
+body {
+    padding: 20px;
+    margin: 0;
+}
+
+#gallery {
+    list-style-type: none;
+    padding: 0;
+    margin: -15px;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery {
+    &-item {
+        margin: 15px;
+    }
+
+    &-image {
+        display: block;
+        width: 700px;
+        height: 380px;
+    }
+}
