@@ -17,28 +17,13 @@ const ingredients = [
 
 const ingredientsList = document.querySelector('#ingredients');
 
-// 1 VARIANT
+const createIngredientItem = ingredient => {
+    const itemEl = document.createElement('li');
+    itemEl.textContent = ingredient;
 
-// ingredients.forEach(ingredient => {
-//     const itemEl = document.createElement('li');
-
-//     itemEl.textContent = ingredient;
-//     ingredientsList.appendChild(itemEl);
-//     console.log(ingredients);
-// });
-
-
-// 2 VARIANT after function
-
-const createIngredientList = (ingredients) => {
-    ingredients.forEach(ingredient => {
-        const itemEl = document.createElement('li');
-    
-        itemEl.textContent = ingredient;
-        ingredientsList.appendChild(itemEl);
-        console.log(ingredients);
-    });
+    return itemEl;
 };
 
-createIngredientList(ingredients);
+const createIngredientsList = ingredients.map(createIngredientItem);
 
+ingredientsList.append(...createIngredientsList);
