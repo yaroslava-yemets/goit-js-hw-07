@@ -23,7 +23,7 @@ body {
 
 .gallery-image {
   display: block;
-  width: 575px;
+  width: auto;
   height: 380px;
 }
 /*# sourceMappingURL=main.css.map */
