@@ -34,9 +34,10 @@ function onCreateBtnClick (amount) {
     if (amount <= MAX_AMOUNT && amount > MIN_AMOUNT) {
         for (let i = 0; i < amount; i += 1) {
             const divEl = document.createElement('div');
-            divEl.style.backgroundColor = "green";
             divEl.style.height = `${30 + (i * 10)}px`;
             divEl.style.width = `${30 + (i * 10)}px`;
+            divEl.style.backgroundColor = '#' + (Math.random().toString(16) + "000000").substring(2,8);
+            divEl.style.borderColor = '#' + (Math.random().toString(16) + "000000").substring(2,8);
             divCollection.push(divEl);
         };
     } else {
